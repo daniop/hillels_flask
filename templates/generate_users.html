@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate users</title>
+</head>
+<body>
+
+    {% for _ in range(count) %}
+        <p>{{ fake.name() }} {{ fake.email(safe=False) }}</p>
+    {% endfor %}
+
+</body>
+</html>
