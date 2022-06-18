@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracks and seconds</title>
+</head>
+<body>
+    {% for line in tracks_list %}
+        <h1>{{ line['title'] }} {{ line['seconds'] }} сек. ({{ line['seconds']|format_seconds }})</h1>
+    {% endfor %}
+</body>
+</html>
