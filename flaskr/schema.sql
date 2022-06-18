@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS tracks;
+DROP TABLE IF EXISTS genres;
+
+CREATE TABLE tracks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT  NOT NULL,
+  genre_id INTEGER,
+  artist TEXT NOT NULL,
+  seconds INT NOT NULL,
+  FOREIGN KEY (genre_id) REFERENCES genres (id)
+);
+
+CREATE TABLE genres (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL
+);
